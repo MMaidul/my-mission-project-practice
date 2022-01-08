@@ -1,0 +1,20 @@
+.footer-section {
+  border-top: 1px solid gray;
+  padding-top: 10px;
+  .footer {
+    &__content {
+      h4 {
+        span {
+          color: $primary_color;
+        }
+      }
+      p {
+        span {
+          color: $primary_color;
+          font-style: italic;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

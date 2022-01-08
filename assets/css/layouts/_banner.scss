@@ -1,0 +1,29 @@
+.banner-section {
+  margin-top: 50px;
+  .banner {
+    &__content {
+      h1 {
+        font-size: 80px;
+        line-height: 80px;
+        span {
+          display: block;
+          color: $primary_color;
+        }
+      }
+      p {
+        padding: 20px 0;
+        font-size: 17px;
+      }
+      small {
+        display: block;
+        font-size: 17px;
+        margin-top: 20px;
+      }
+    }
+    &__img {
+      img {
+        width: 350px;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+}
+
+//grid_columns;
+$grid_columns: 12;
+$grid_xl_breakpoints: 1200px;
+
+@media (min-width: $grid_xl_breakpoints) {
+  .container {
+    width: 1170px;
+  }
+  @for $var from 1 through $grid_columns {
+    .col-xl-#{$var} {
+      width: (100 / $grid_columns) * $var * 1%;
+    }
+  }
+}
+
+//flex;
+$flex: flex, inline-flex;
+@each $var in $flex {
+  .d-#{$var} {
+    display: $var;
+  }
+}
+
+//flex_wrap;
+$flex_wrap: wrap, nowrap;
+@each $var in $flex_wrap {
+  .flex-#{$var} {
+    flex: $var;
+  }
+}
+//flex-directions;
+$flex_directions: column, column-reverse, row, row-reverse;
+@each $var in $flex_directions {
+  .directions-#{$var} {
+    flex-direction: $var;
+  }
+}
+//justify-content;
+$justify_content: left, right, center, end, space-between, space-around,
+  space-evenly;
+@each $var in $justify_content {
+  .justify-#{$var} {
+    justify-content: $var;
+  }
+}
+
+//align_items;
+$align_items: left, right, center, end, space-between, space-around,
+  space-evenly;
+@each $var in $align_items {
+  .items-#{$var} {
+    align-items: $var;
+  }
+}

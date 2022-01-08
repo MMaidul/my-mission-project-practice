@@ -1,0 +1,25 @@
+.contact-section {
+  .contact {
+    &__img {
+    }
+    &__msg {
+      input,
+      textarea {
+        width: 100%;
+        padding: 6px 10px;
+        border-radius: 7px;
+        outline: none;
+        border: 1px solid $gray;
+      }
+      textarea {
+        resize: none;
+      }
+      &-btn {
+        padding-top: 20px;
+        :first-child {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+//headings;
+$headings: (p, 16px, 22px, 400), (h6, 16px, 22px, 400), (h5, 20px, 24px, 500),
+  (h4, 24px, 28px, 500), (h3, 28px, 32px, 600), (h2, 32px, 700),
+  (h1, 40px, 44px, 800);
+
+@each $title, $font_size, $line_height, $font_weight in $headings {
+  #{$title} {
+    font-size: $font_size;
+    line-height: $line_height;
+    font-weight: $font_weight;
+  }
+}
+
+//text_align;
+$text_align: center, right, left, justify;
+@each $var in $text_align {
+  .text-#{$var} {
+    text-align: $var;
+  }
+}
+
+//text_transform;
+$text_transform: capitalize, uppercase, lowercase;
+@each $var in $text_transform {
+  .text-#{$var} {
+    text-transform: $var;
+  }
+}
+
+.py-100 {
+  padding: 100px 0;
+}

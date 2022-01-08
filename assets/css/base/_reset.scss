@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $black;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+//btn;
+.btn {
+  display: inline-block;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 700;
+  &--box {
+    background-color: $primary_color;
+    color: $white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 0%;
+      height: 100%;
+      background-color: $black;
+      border-radius: 10px;
+      z-index: -1;
+      transition: 0.3s;
+    }
+    &:hover::before {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
